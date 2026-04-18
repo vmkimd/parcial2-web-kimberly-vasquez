@@ -1,0 +1,29 @@
+<nav style="background: #2c3e50; color: white; padding: 15px; text-align: center;">
+  <strong>SISTEMA WEB - </strong>
+  <span style="color: #ecf0f1; cursor: pointer; text-decoration: underline;">MI PERFIL</span>
+</nav>
+
+<div style="padding: 20px; max-width: 400px; margin: auto; border: 1px solid #ddd; border-radius: 10px; margin-top: 20px;">
+  <h2 style="text-align: center;">Datos del Perfil</h2>
+  <form (submit)="guardar(); $event.preventDefault()">
+    <label>Nombre:</label><br>
+    <input type="text" [(ngModel)]="perfil.nombre" name="nombre" style="width: 100%;" required><br><br>
+    
+    <label>Apellido:</label><br>
+    <input type="text" [(ngModel)]="perfil.apellido" name="apellido" style="width: 100%;" required><br><br>
+    
+    <label>Edad:</label><br>
+    <input type="number" [(ngModel)]="perfil.edad" name="edad" style="width: 100%;" required><br><br>
+    
+    <label>Correo:</label><br>
+    <!-- Cambié el type a "email" para ayudar a la validación -->
+    <input type="email" [(ngModel)]="perfil.correo" name="correo" style="width: 100%;" required><br><br>
+    
+    <label>Teléfono (8 dígitos):</label><br>
+    <input type="text" [(ngModel)]="perfil.telefono" name="telefono" maxlength="8" style="width: 100%;" required><br><br>
+    
+    <button type="submit" style="width: 100%; padding: 10px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      GUARDAR / ACTUALIZAR
+    </button>
+  </form>
+</div>

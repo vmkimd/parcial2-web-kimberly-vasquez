@@ -1,0 +1,14 @@
+<div style="text-align: center; margin-top: 50px;">
+  <h2>Iniciar Sesión</h2>
+  <div style="display: inline-block; text-align: left; border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
+    <label>Usuario:</label><br>
+    <input type="text" [(ngModel)]="usuario" placeholder="Ingrese su usuario"><br><br>
+    
+    <label>Contraseña:</label><br>
+    <input type="password" [(ngModel)]="password" placeholder="Ingrese su contraseña"><br><br>
+    
+    <button (click)="onLogin()">Ingresar</button>
+    
+    <p style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</div>
